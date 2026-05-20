@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Hanken_Grotesk } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "@/components/ThemeProvider";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -31,7 +32,11 @@ export default function RootLayout({
       className={`${inter.variable} ${hankenGrotesk.variable} h-full antialiased`}
       suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col bg-[#fcf9f7] text-[#575757]">{children}</body>
+      <body className="min-h-full flex flex-col bg-canvas-warmth text-body-gray">
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }

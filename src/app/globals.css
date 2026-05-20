@@ -1,24 +1,24 @@
 @import "tailwindcss";
 
 @theme {
-  /* Alveos One Style Colors */
-  --color-canvas-warmth: #fcf9f7;
-  --color-surface-white: #ffffff;
-  --color-deep-graphite: #05060b;
-  --color-text-black: #000000;
-  --color-headline-dark: #262628;
-  --color-body-gray: #575757;
-  --color-muted-text: #a5a5a5;
-  --color-line-gray: #d1cfcd;
-  --color-ghost-fill: #030f1c;
+  /* Dynamic Theme Colors */
+  --color-canvas-warmth: var(--theme-canvas-warmth);
+  --color-surface-white: var(--theme-surface-white);
+  --color-deep-graphite: var(--theme-deep-graphite);
+  --color-text-black: var(--theme-text-black);
+  --color-headline-dark: var(--theme-headline-dark);
+  --color-body-gray: var(--theme-body-gray);
+  --color-muted-text: var(--theme-muted-text);
+  --color-line-gray: var(--theme-line-gray);
+  --color-ghost-fill: var(--theme-ghost-fill);
 
   /* Descriptive mappings to prevent component compile breaks */
-  --color-medical-blue: #05060b;   /* Primary accent -> Deep Graphite */
-  --color-trust-navy: #000000;     /* Navy text -> Text Black */
-  --color-recovery-teal: #262628;  /* Accent titles -> Headline Dark */
-  --color-soft-grey: #fcf9f7;      /* Section base -> Canvas Warmth */
-  --color-border-grey: #d1cfcd;    /* Subtle dividers -> Line Gray */
-  --color-success-green: #262628;  /* Solid items -> Headline Dark */
+  --color-medical-blue: var(--theme-deep-graphite);
+  --color-trust-navy: var(--theme-text-black);
+  --color-recovery-teal: var(--theme-headline-dark);
+  --color-soft-grey: var(--theme-canvas-warmth);
+  --color-border-grey: var(--theme-line-gray);
+  --color-success-green: var(--theme-headline-dark);
 
   /* Typography Fonts */
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
@@ -32,28 +32,41 @@
   --card-padding: 20px;
   --element-gap: 10px;
 
-  /* Custom Color Properties */
-  --color-canvas-warmth: #fcf9f7;
-  --color-surface-white: #ffffff;
-  --color-deep-graphite: #05060b;
-  --color-text-black: #000000;
-  --color-headline-dark: #262628;
-  --color-body-gray: #575757;
-  --color-muted-text: #a5a5a5;
-  --color-line-gray: #d1cfcd;
-  --color-ghost-fill: #030f1c;
+  /* Light Theme Properties (Alveos One) */
+  --theme-canvas-warmth: #fcf9f7;
+  --theme-surface-white: #ffffff;
+  --theme-deep-graphite: #05060b;
+  --theme-text-black: #000000;
+  --theme-headline-dark: #262628;
+  --theme-body-gray: #575757;
+  --theme-muted-text: #a5a5a5;
+  --theme-line-gray: #d1cfcd;
+  --theme-ghost-fill: #030f1c;
 }
 
-/* Global Reset and Oasis Light Aesthetics */
+:root.dark {
+  /* Dark Theme Properties (Midnight Desert Oasis from de63e7d) */
+  --theme-canvas-warmth: #0b0600; /* Abyss */
+  --theme-surface-white: #140b00; /* Deep Onyx */
+  --theme-deep-graphite: #ffb442; /* Amber Glow */
+  --theme-text-black: #fff1e0;    /* Dawn Linen */
+  --theme-headline-dark: #fff1e0; /* Dawn Linen */
+  --theme-body-gray: #85796c;     /* Pale Ash */
+  --theme-muted-text: #ffb442;    /* Amber Glow */
+  --theme-line-gray: #43392d;     /* Fossil Grey */
+  --theme-ghost-fill: #ffb442;    /* Amber Glow */
+}
+
+/* Global Reset and Aesthetics */
 html {
   scroll-behavior: smooth;
-  background-color: #fcf9f7; /* Canvas Warmth base */
-  color: #575757;            /* Body Gray text */
+  background-color: var(--theme-canvas-warmth);
+  color: var(--theme-body-gray);
 }
 
 body {
-  background-color: #fcf9f7;
-  color: #575757;
+  background-color: var(--theme-canvas-warmth);
+  color: var(--theme-body-gray);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
 }
@@ -64,7 +77,7 @@ body {
   font-size: 52px;
   line-height: 1.1;
   font-weight: 500;
-  color: #262628;
+  color: var(--theme-headline-dark);
 }
 
 .text-hero {
@@ -72,7 +85,7 @@ body {
   font-size: 38px;
   line-height: 1.2;
   font-weight: 500;
-  color: #262628;
+  color: var(--theme-headline-dark);
 }
 
 .text-section {
@@ -80,7 +93,7 @@ body {
   font-size: 28px;
   line-height: 1.2;
   font-weight: 600;
-  color: #262628;
+  color: var(--theme-headline-dark);
 }
 
 .text-subheading {
@@ -88,7 +101,7 @@ body {
   font-size: 18px;
   line-height: 1.4;
   font-weight: 500;
-  color: #262628;
+  color: var(--theme-headline-dark);
 }
 
 .text-body {
@@ -96,7 +109,7 @@ body {
   font-size: 16px;
   line-height: 1.4;
   font-weight: 400;
-  color: #575757; /* Body Gray */
+  color: var(--theme-body-gray);
 }
 
 .text-caption {
@@ -106,7 +119,7 @@ body {
   font-weight: 600;
   letter-spacing: 4.44px;
   text-transform: uppercase;
-  color: #a5a5a5; /* Muted Text */
+  color: var(--theme-muted-text);
 }
 
 /* Responsive Scaling for smaller screens */
@@ -148,16 +161,16 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #fcf9f7; /* Canvas Warmth */
+  background: var(--theme-canvas-warmth);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #d1cfcd; /* Line Gray */
+  background: var(--theme-line-gray);
   border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #05060b; /* Deep Graphite */
+  background: var(--theme-deep-graphite);
 }
 
 /* Filled Primary Button */
@@ -165,25 +178,25 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: #05060b; /* Deep Graphite */
-  color: #fcf9f7;            /* Canvas Warmth */
+  background-color: var(--theme-deep-graphite);
+  color: var(--theme-canvas-warmth);
   font-family: var(--font-sans);
   font-weight: 600;
   font-size: 12px;
   letter-spacing: 0.444em;
   text-transform: uppercase;
   padding: 14px 30px;
-  border-radius: 12px;     /* Rounded 12px buttons per Alveos tokens */
-  border: 1px solid #05060b;
+  border-radius: 12px;
+  border: 1px solid var(--theme-deep-graphite);
   box-shadow: rgba(0, 0, 0, 0.06) 0px 1px 5px 0px;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .btn-primary:hover {
-  background-color: #ffffff; /* Surface White */
-  color: #05060b;            /* Deep Graphite */
-  border-color: #d1cfcd;     /* Line Gray */
+  background-color: var(--theme-surface-white);
+  color: var(--theme-deep-graphite);
+  border-color: var(--theme-line-gray);
   transform: translateY(-1px);
 }
 
@@ -193,7 +206,7 @@ body {
   align-items: center;
   justify-content: center;
   background-color: transparent;
-  color: #000000;            /* Text Black */
+  color: var(--theme-text-black);
   font-family: var(--font-sans);
   font-weight: 600;
   font-size: 12px;
@@ -201,42 +214,41 @@ body {
   text-transform: uppercase;
   padding: 7px 20px;
   border-radius: 12px;
-  border: 1px solid #d1cfcd; /* Line Gray border */
+  border: 1px solid var(--theme-line-gray);
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .btn-secondary:hover {
-  background-color: rgba(5, 6, 11, 0.05); /* Very subtle Graphite ghost tint */
-  border-color: #05060b;
+  background-color: color-mix(in srgb, var(--theme-deep-graphite) 5%, transparent);
+  border-color: var(--theme-deep-graphite);
   transform: translateY(-1px);
 }
 
-/* Simple Content Card: Radius 25px, no shadow, White bg */
+/* Simple Content Card */
 .card-clinical {
-  background-color: #ffffff; /* Surface White */
-  border: 1px solid #d1cfcd; /* Line Gray */
-  border-radius: 25px;        /* Generous 25px cards per Alveos tokens */
-  padding: 20px 25px;         /* Comfortable card padding */
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 2px 10px 0px; /* Subtle shadow md */
+  background-color: var(--theme-surface-white);
+  border: 1px solid var(--theme-line-gray);
+  border-radius: 25px;
+  padding: 20px 25px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 2px 10px 0px;
   transition: all 0.3s ease;
 }
 
 .card-clinical:hover {
-  border-color: #05060b; /* Deep Graphite outline on hover */
-  box-shadow: rgba(0, 0, 0, 0.08) 0px 8px 30px 0px, rgba(0, 0, 0, 0.05) 0px 2px 8px 0px; /* Elevate on hover */
+  border-color: var(--theme-deep-graphite);
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 8px 30px 0px, rgba(0, 0, 0, 0.05) 0px 2px 8px 0px;
 }
 
-/* Clean Custom Global Form overrides to support Alveos warm gray mode */
+/* Clean Custom Global Form overrides */
 input[type="text"],
 input[type="tel"],
 input[type="date"],
 select {
-  background-color: #ffffff !important; /* Surface White */
-  color: #000000 !important;             /* Text Black */
-  border: 1px solid #d1cfcd !important;  /* Line Gray border */
-  border-radius: 12px !important;        /* 12px buttons and input corners */
-  padding: 12px 20px !important;
+  background-color: var(--theme-surface-white) !important;
+  color: var(--theme-text-black) !important;
+  border: 1px solid var(--theme-line-gray) !important;
+  border-radius: 12px !important;
   font-size: 14px !important;
   outline: none !important;
   box-shadow: rgba(0, 0, 0, 0.06) 0px 1px 5px 0px !important;
@@ -246,6 +258,6 @@ input[type="text"]:focus,
 input[type="tel"]:focus,
 input[type="date"]:focus,
 select:focus {
-  border-color: #05060b !important; /* Deep Graphite */
+  border-color: var(--theme-deep-graphite) !important;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 2px 10px 0px !important;
 }

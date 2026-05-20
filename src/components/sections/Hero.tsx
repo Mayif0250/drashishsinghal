@@ -17,9 +17,9 @@ export default function Hero() {
           className="object-cover object-right opacity-100"
         />
         {/* Reduced-opacity overlays — lets background image show clearly */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#fcf9f7]/90 via-[#fcf9f7]/60 md:via-[#fcf9f7]/40 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#fcf9f7]/50 via-transparent to-transparent pointer-events-none" />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#fcf9f7]/15 via-transparent to-transparent pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-r from-canvas-warmth/90 via-canvas-warmth/60 md:via-canvas-warmth/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-canvas-warmth/50 via-transparent to-transparent pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-b from-canvas-warmth/15 via-transparent to-transparent pointer-events-none" />
       </div>
 
       <div className="max-w-[94%] mx-auto px-4 md:px-8 w-full relative z-10 flex-grow flex items-center pt-8">
