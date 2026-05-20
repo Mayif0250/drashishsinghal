@@ -21,23 +21,26 @@ export default function Navbar() {
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
           ? "bg-[#0b0600]/90 backdrop-blur-md border-b border-[#43392d]/40 py-3 shadow-md"
           : "bg-transparent border-none py-5"
-      }`}
+        }`}
     >
       <div className="max-w-[94%] mx-auto px-4 md:px-8 flex items-center justify-between">
         {/* Brand Identity */}
         <Link href="/" className="flex items-center gap-2 group">
-          <div className="w-10 h-10 rounded-[6px] bg-[#ffb442] flex items-center justify-center text-[#140b00] shadow-md">
+          <div className="w-10 h-10 rounded-[6px] bg-[#ffb442] flex items-center justify-center text-neutral-900 shadow-md">
             <Stethoscope size={20} strokeWidth={2.5} />
           </div>
           <div>
-            <span className="font-display font-bold text-lg tracking-tight text-white block leading-none">
+            <span className={`font-display font-bold text-lg tracking-tight transition-colors block leading-none ${
+              scrolled ? "text-white" : "text-neutral-900"
+            }`}>
               Dr. Ashish Singhal
             </span>
-            <span className="text-[11px] font-medium tracking-wide text-recovery-teal block mt-1 uppercase">
+            <span className={`text-[11px] font-medium tracking-wide block mt-1 uppercase transition-colors ${
+              scrolled ? "text-[#ffb442]" : "text-[#b8750a]"
+            }`}>
               Orthopedic & Robotic Joint Specialist
             </span>
           </div>
@@ -45,19 +48,29 @@ export default function Navbar() {
 
         {/* Navigation links */}
         <nav className="hidden lg:flex items-center gap-8">
-          <Link href="#about" className="text-sm font-semibold text-white/95 hover:text-[#ffb442] transition-colors">
+          <Link href="#about" className={`text-sm font-semibold transition-colors ${
+            scrolled ? "text-white/95 hover:text-[#ffb442]" : "text-neutral-900 hover:text-[#ffb442]"
+          }`}>
             About Dr. Singhal
           </Link>
-          <Link href="#services" className="text-sm font-semibold text-white/95 hover:text-[#ffb442] transition-colors">
+          <Link href="#services" className={`text-sm font-semibold transition-colors ${
+            scrolled ? "text-white/95 hover:text-[#ffb442]" : "text-neutral-900 hover:text-[#ffb442]"
+          }`}>
             Treatments
           </Link>
-          <Link href="#robotic" className="text-sm font-semibold text-white/95 hover:text-[#ffb442] transition-colors">
+          <Link href="#robotic" className={`text-sm font-semibold transition-colors ${
+            scrolled ? "text-white/95 hover:text-[#ffb442]" : "text-neutral-900 hover:text-[#ffb442]"
+          }`}>
             Robotic Surgery
           </Link>
-          <Link href="#clinics" className="text-sm font-semibold text-white/95 hover:text-[#ffb442] transition-colors">
+          <Link href="#clinics" className={`text-sm font-semibold transition-colors ${
+            scrolled ? "text-white/95 hover:text-[#ffb442]" : "text-neutral-900 hover:text-[#ffb442]"
+          }`}>
             Clinic Locations
           </Link>
-          <Link href="#faq" className="text-sm font-semibold text-white/95 hover:text-[#ffb442] transition-colors">
+          <Link href="#faq" className={`text-sm font-semibold transition-colors ${
+            scrolled ? "text-white/95 hover:text-[#ffb442]" : "text-neutral-900 hover:text-[#ffb442]"
+          }`}>
             FAQ
           </Link>
         </nav>
@@ -66,7 +79,9 @@ export default function Navbar() {
         <div className="flex items-center gap-2">
           <a
             href="tel:+919414393320"
-            className="hidden sm:flex items-center justify-center border border-[#43392d] px-4 py-2 rounded-full text-xs font-semibold text-white hover:border-[#ffb442] hover:text-[#ffb442] transition-all"
+            className={`hidden sm:flex items-center justify-center border px-4 py-2 rounded-full text-xs font-semibold hover:border-[#ffb442] hover:text-[#ffb442] transition-all ${
+              scrolled ? "border-[#43392d] text-white" : "border-neutral-300 text-neutral-900"
+            }`}
           >
             <span>+91 94143 93320</span>
           </a>
