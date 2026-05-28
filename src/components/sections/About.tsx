@@ -23,8 +23,14 @@ export default function About() {
     <section className="relative bg-white pt-24 pb-8 overflow-hidden" id="about">
       {/* Background Dot Matrix */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden z-0">
-        <div className="absolute top-24 left-8 grid grid-cols-6 gap-[14px] opacity-30">
-            {Array.from({ length: 30 }).map((_, i) => (
+        <div 
+          className="absolute top-20 left-6 grid grid-cols-8 gap-3 opacity-40"
+          style={{
+            WebkitMaskImage: 'radial-gradient(circle at center, black 20%, transparent 75%)',
+            maskImage: 'radial-gradient(circle at center, black 20%, transparent 75%)'
+          }}
+        >
+            {Array.from({ length: 64 }).map((_, i) => (
                 <div key={i} className="w-1.5 h-1.5 rounded-full bg-[#3b5998]"></div>
             ))}
         </div>
