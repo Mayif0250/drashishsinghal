@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { GraduationCap, Award, Star, Activity } from "lucide-react";
+import { GraduationCap, Award, Activity, User, ArrowRight } from "lucide-react";
 
 export default function About() {
   const qualifications = [
@@ -71,68 +71,41 @@ export default function About() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-[#3b5998] font-bold tracking-[0.1em] text-xs uppercase mb-2">
-                ABOUT ME
+              <h2 className="text-[#2563eb] font-bold tracking-[0.1em] text-xs uppercase mb-2">
+                ABOUT DR ASHISH SINGHAL
               </h2>
               
-              <div className="w-8 h-[2px] bg-[#3b5998] mb-4"></div>
+              <div className="w-8 h-[2px] bg-[#2563eb] mb-6"></div>
               
-              <h1 className="text-5xl md:text-[56px] font-serif text-[#0b1b3d] leading-tight mb-6">
+              <h1 className="text-5xl md:text-[56px] font-serif text-[#0b1b3d] leading-tight mb-4">
                 Dr. Ashish Singhal
               </h1>
 
-              <p className="text-[#575757] text-[15px] leading-[1.8] mb-12 max-w-[95%]">
-                A distinguished Orthopedic Consultant at Paras Health, Udaipur, Dr. Singhal
-                embodies excellence in orthopedic care — particularly in spine surgery. With
-                a career spanning over a decade, he has been a pioneer in advancing
-                orthopedic treatments, specializing in robotic surgery and joint replacements
-                for the knee, shoulder, and back.
+              {/* Award Tag */}
+              <div className="flex items-center gap-3 mb-6">
+                <Award className="text-[#2563eb]" size={28} />
+                <span className="text-[#2563eb] text-xl font-medium">Awarded Best Orthopedic Surgeon in Udaipur</span>
+              </div>
+
+              {/* Paragraphs */}
+              <p className="text-[#575757] text-[15px] leading-[1.8] mb-6 max-w-[95%]">
+                Popularly recognized as one of the best knee surgeons in Udaipur, Rajasthan,
+                Dr. Ashish Singhal, MS (Ortho), is a renowned Orthopedic and Joint Replacement
+                Specialist. He is among the leading joint replacement experts utilizing highly
+                advanced robotic technology for knee and hip replacement surgeries.
               </p>
 
-              {/* Rows */}
-              <div className="flex flex-col">
-                
-                {/* Qualifications */}
-                <div className="flex flex-col sm:flex-row gap-6 sm:gap-10 py-8 border-t border-gray-100">
-                  <div className="flex items-center gap-4 w-[220px] shrink-0">
-                    <div className="w-12 h-12 rounded-full bg-[#f0f5fc] flex items-center justify-center text-[#3b5998]">
-                      <GraduationCap size={22} strokeWidth={1.5} />
-                    </div>
-                    <span className="text-[#3b5998] font-bold text-xs tracking-widest uppercase">Qualifications</span>
-                  </div>
-                  <div className="flex-1">
-                    <ul className="space-y-3">
-                      {qualifications.map((item, idx) => (
-                        <li key={idx} className="flex items-start gap-3 text-[#575757] text-[13px] font-medium">
-                          <span className="w-1 h-1 rounded-full bg-[#0b1b3d] mt-2 shrink-0 opacity-60"></span>
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
+              <p className="text-[#575757] text-[15px] leading-[1.8] mb-10 max-w-[95%]">
+                His precision-driven approach delivers superior treatment outcomes with minimal
+                complications, reduced pain, shorter hospital stays, faster recovery, and longer-lasting implant performance — helping patients regain mobility and improve their
+                quality of life with confidence.
+              </p>
 
-                {/* Specializations */}
-                <div className="flex flex-col sm:flex-row gap-6 sm:gap-10 py-8 border-y border-gray-100">
-                  <div className="flex items-center gap-4 w-[220px] shrink-0">
-                    <div className="w-12 h-12 rounded-full bg-[#f0f5fc] flex items-center justify-center text-[#3b5998]">
-                      <Activity size={22} strokeWidth={1.5} />
-                    </div>
-                    <span className="text-[#3b5998] font-bold text-xs tracking-widest uppercase">Specializations</span>
-                  </div>
-                  <div className="flex-1">
-                    <ul className="space-y-3">
-                      {specializations.map((item, idx) => (
-                        <li key={idx} className="flex items-start gap-3 text-[#575757] text-[13px] font-medium">
-                          <span className="w-1 h-1 rounded-full bg-[#0b1b3d] mt-2 shrink-0 opacity-60"></span>
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
+              {/* Button */}
+              <button className="flex items-center gap-2 border border-[#2563eb] text-[#2563eb] font-semibold text-[13px] px-6 py-3 rounded hover:bg-[#eff6ff] transition-colors mb-12 tracking-wide">
+                CLICK HERE TO KNOW MORE <ArrowRight size={16} />
+              </button>
 
-              </div>
             </motion.div>
           </div>
 
