@@ -109,8 +109,8 @@ export default function About() {
               </p>
 
               {/* Button */}
-              <button className="flex items-center gap-2 border border-[#2563eb] text-[#2563eb] font-semibold text-[13px] px-6 py-3 rounded hover:bg-[#eff6ff] transition-colors mb-12 tracking-wide">
-                CLICK HERE TO KNOW MORE <ArrowRight size={16} />
+              <button className="bg-white hover:bg-gray-50 hover:border-black text-[#0b1b3d] py-3.5 px-8 text-sm font-medium rounded-lg flex items-center gap-2 transition-all shadow-sm border border-gray-200 w-fit uppercase tracking-wide">
+                CLICK HERE TO KNOW MORE <ArrowRight size={18} />
               </button>
 
             </motion.div>
