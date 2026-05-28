@@ -47,7 +47,7 @@ export default function About() {
             />
             
             {/* Wavy bottom overlay masking the doctor */}
-            <div className="absolute top-[118%] left-[-15%] w-[115%] h-[600px] z-20 pointer-events-none -translate-y-full">
+            <div className="absolute top-[122%] w-[125%] h-[600px] z-20 pointer-events-none -translate-y-full">
               <svg viewBox="0 0 100 40" preserveAspectRatio="none" className="w-full h-full">
                 {/* Solid white base to seamlessly blend with section background */}
                 <path d="M0,10 C30,22 70,-2 100,10 L100,40 L0,40 Z" fill="white" />
