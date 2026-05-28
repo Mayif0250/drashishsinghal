@@ -20,7 +20,7 @@ export default function About() {
 
 
   return (
-    <section className="relative bg-white py-24 overflow-hidden" id="about">
+    <section className="relative bg-white pt-24 pb-8 overflow-hidden" id="about">
       {/* Background Dot Matrix */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden z-0">
         <div className="absolute top-24 left-8 grid grid-cols-6 gap-[14px] opacity-30">
@@ -34,7 +34,7 @@ export default function About() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-8 items-start">
           
           {/* Left Column - Image & Graphic Elements */}
-          <div className="lg:col-span-5 relative flex justify-center items-end h-[750px]">
+          <div className="lg:col-span-5 relative flex justify-center items-end h-[750px] lg:-mb-[280px]">
             
             {/* Large light blue circle */}
             <div className="absolute top-[8%] left-1/2 -translate-x-1/2 w-[100%] aspect-square bg-[#f0f5fc] rounded-full z-0"></div>
@@ -43,14 +43,15 @@ export default function About() {
               src="/about_doctor.png"
               alt="Dr. Ashish Singhal"
               fill
-              className="object-contain object-top relative z-10 drop-shadow-[0_20px_30px_rgba(0,0,0,0.08)] scale-[1.5] origin-top"
+              draggable={false}
+              className="object-contain object-top relative z-10 drop-shadow-[0_20px_30px_rgba(0,0,0,0.08)] scale-[1.5] origin-top select-none pointer-events-none"
             />
             
             {/* Wavy bottom overlay masking the doctor */}
             <div className="absolute top-[122%] w-[125%] h-[600px] z-20 pointer-events-none -translate-y-full">
               <svg viewBox="0 0 100 40" preserveAspectRatio="none" className="w-full h-full">
                 {/* Solid white base to seamlessly blend with section background */}
-                <path d="M0,10 C30,22 70,-2 100,10 L100,40 L0,40 Z" fill="white" />
+                <path d="M0,10 C30,22 70,-2 100,10 L100,20 L0,20 Z" fill="white" />
                 
                 {/* Subtle blue wave lines */}
                 <path d="M0,10 C30,22 70,-2 100,10" fill="none" stroke="#3b5998" strokeWidth="0.15" opacity="0.3" />
