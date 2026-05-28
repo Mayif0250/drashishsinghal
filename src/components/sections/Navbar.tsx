@@ -49,10 +49,10 @@ export default function Navbar() {
           <Link href="#about" className="text-sm font-medium text-headline-dark/90 hover:text-deep-graphite transition-colors">
             About
           </Link>
-          <Link href="#services" className="text-sm font-medium text-headline-dark/90 hover:text-deep-graphite transition-colors">
+          <Link href="/services" className="text-sm font-medium text-headline-dark/90 hover:text-deep-graphite transition-colors">
             Services
           </Link>
-          <Link href="#expertise" className="text-sm font-medium text-headline-dark/90 hover:text-deep-graphite transition-colors">
+          <Link href="/expertise" className="text-sm font-medium text-headline-dark/90 hover:text-deep-graphite transition-colors">
             Expertise
           </Link>
           <Link href="#patient-stories" className="text-sm font-medium text-headline-dark/90 hover:text-deep-graphite transition-colors">
