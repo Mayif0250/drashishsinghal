@@ -85,7 +85,7 @@ export default function ExpertisePage() {
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#0b1b3d]/85 via-[#0b1b3d]/60 to-transparent" />
 
-          <div className="relative z-10 w-full max-w-[1536px] mx-auto px-6 md:px-16 lg:px-24 h-full flex flex-col justify-center items-start text-left">
+          <div className="relative z-10 w-full max-w-[99%] mx-auto px-6 h-full flex flex-col justify-center items-start text-left">
             <span className="text-white text-xs font-bold tracking-widest uppercase mb-4 opacity-90 border-b border-white/20 pb-2 inline-block">
               EXPERTISE
             </span>
@@ -106,7 +106,7 @@ export default function ExpertisePage() {
 
         {/* Medical Qualifications */}
         <section className="bg-white py-20 relative overflow-hidden">
-          <div className="max-w-7xl mx-auto px-6 flex flex-col items-center">
+          <div className="max-w-[99%] mx-auto px-6 flex flex-col items-center">
 
             {/* Centered Title with Heartbeats */}
             <div className="flex items-center justify-center gap-2 md:gap-6 mb-24 w-full">
@@ -249,7 +249,7 @@ export default function ExpertisePage() {
 
         {/* Specialization and Expertise */}
         <section className="bg-white py-20 border-t border-gray-100 relative overflow-hidden">
-          <div className="max-w-7xl mx-auto px-6 flex flex-col items-center relative z-10">
+          <div className="max-w-[99%] mx-auto px-6 flex flex-col items-center relative z-10">
             <div className="flex flex-col items-center mb-16">
               <h2 className="text-[20px] md:text-[24px] font-serif font-bold text-[#0b1b3d] uppercase tracking-wide text-center">
                 SPECIALIZATION AND EXPERTISE
@@ -257,7 +257,7 @@ export default function ExpertisePage() {
               <div className="w-16 h-1 bg-blue-600 mt-3" />
             </div>
             {/* Horizontal Image Callouts (HUD Style) */}
-            <div className="w-full max-w-8xl mx-auto mb-20 relative z-20 flex flex-row justify-center md:justify-between items-end gap-8 md:gap-16 flex-wrap md:flex-nowrap px-4">
+            <div className="w-full max-w-[99%] mx-auto mb-20 relative z-20 flex flex-row justify-center md:justify-between items-end gap-8 md:gap-16 flex-wrap md:flex-nowrap px-4">
             
             {/* The continuous horizontal line */}
             <div className="block absolute top-0 left-0 right-0 h-[1px] bg-black" />
@@ -386,7 +386,7 @@ export default function ExpertisePage() {
 
         {/* Certifications and Awards & Recognitions */}
         <section className="bg-white py-20 border-t border-gray-100">
-          <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-0 divide-y lg:divide-y-0 lg:divide-x divide-gray-200">
+          <div className="max-w-[99%] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-0 divide-y lg:divide-y-0 lg:divide-x divide-gray-200">
             
             {/* Left Column: Certifications */}
             <div className="flex flex-col items-center lg:pr-12 pt-8 lg:pt-0">

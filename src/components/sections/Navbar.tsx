@@ -28,7 +28,7 @@ export default function Navbar() {
         : "bg-transparent py-4"
         }`}
     >
-      <div className="max-w-[94%] mx-auto px-4 md:px-8 flex items-center justify-between">
+      <div className="max-w-[99%] mx-auto px-4 md:px-8 flex items-center justify-between">
         {/* Brand Identity */}
         <Link href="/" className="flex items-center gap-3 group">
           <div className="w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center text-[#1c1c1c] shadow-sm">

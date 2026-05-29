@@ -142,7 +142,7 @@ export default function ServicesPage() {
           />
           <div className="absolute inset-0 bg-gradient-to-l from-[#0b1b3d]/90 via-[#0b1b3d]/70 to-transparent" />
 
-          <div className="relative z-10 max-w-7xl mx-auto px-6 h-full flex flex-col justify-center items-end text-right">
+          <div className="relative z-10 max-w-[99%] mx-auto px-6 h-full flex flex-col justify-center items-end text-right">
             <span className="text-white text-xs font-bold tracking-widest uppercase mb-4 opacity-90 border-b border-white/20 pb-2 inline-block w-[120px]">
               SERVICES
             </span>
@@ -157,7 +157,7 @@ export default function ServicesPage() {
 
         {/* Services Grid Section */}
         <section className="py-20 md:py-28 px-4 md:px-6">
-          <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
+          <div className="max-w-[99%] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
 
             {services.map((service) => (
               <div key={service.id} className="bg-white rounded-[32px] shadow-[0_4px_24px_rgb(0,0,0,0.04)] overflow-hidden flex flex-col sm:flex-row h-auto min-h-[420px] group border border-gray-100">
@@ -236,7 +236,7 @@ export default function ServicesPage() {
 
         {/* Feature Icons Footer Banner */}
         <section className="bg-white py-12 border-t border-gray-100">
-          <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 divide-x divide-gray-100">
+          <div className="max-w-[99%] mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 divide-x divide-gray-100">
             <div className="flex flex-col items-center text-center px-4">
               <div className="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center text-blue-600 mb-3">
                 <Activity size={24} strokeWidth={1.5} />
