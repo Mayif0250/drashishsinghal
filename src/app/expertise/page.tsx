@@ -83,9 +83,9 @@ export default function ExpertisePage() {
             className="object-cover object-[center_1%]"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0b1b3d]/95 via-[#0b1b3d]/80 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0b1b3d]/85 via-[#0b1b3d]/60 to-transparent" />
 
-          <div className="relative z-10 max-w-7xl mx-auto px-6 h-full flex flex-col justify-center items-start text-left">
+          <div className="relative z-10 w-full max-w-[1536px] mx-auto px-6 md:px-16 lg:px-24 h-full flex flex-col justify-center items-start text-left">
             <span className="text-white text-xs font-bold tracking-widest uppercase mb-4 opacity-90 border-b border-white/20 pb-2 inline-block">
               EXPERTISE
             </span>

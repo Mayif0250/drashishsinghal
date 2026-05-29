@@ -1,13 +1,16 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { Stethoscope, PhoneCall, ArrowRight } from "lucide-react";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const pathname = usePathname();
+
+  const isDarkTheme = !scrolled && (pathname === "/expertise" || pathname === "/services");
 
   useEffect(() => {
     setMounted(true);
@@ -19,13 +22,10 @@ export default function Navbar() {
   }, []);
 
   return (
-    <motion.header
-      initial={{ y: -20, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.5 }}
+    <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
-        ? "bg-white/95 backdrop-blur-md border-b border-gray-100 py-3 shadow-sm"
-        : "bg-white border-b border-gray-100 py-4"
+        ? "bg-white/85 backdrop-blur-lg border-b border-gray-200/50 py-3 shadow-md"
+        : "bg-transparent py-4"
         }`}
     >
       <div className="max-w-[94%] mx-auto px-4 md:px-8 flex items-center justify-between">
@@ -35,10 +35,10 @@ export default function Navbar() {
             <Stethoscope size={20} strokeWidth={2.5} />
           </div>
           <div>
-            <span className="font-sans font-bold text-[18px] tracking-tight text-[#1c1c1c] block leading-none mb-1">
+            <span className={`font-sans font-bold text-[18px] tracking-tight block leading-none mb-1 ${isDarkTheme ? "text-white" : "text-[#1c1c1c]"}`}>
               Dr. Ashish Singhal
             </span>
-            <span className="text-[10px] font-bold tracking-wide text-gray-500 block uppercase">
+            <span className={`text-[10px] font-bold tracking-wide block uppercase ${isDarkTheme ? "text-white/80" : "text-gray-500"}`}>
               Orthopedic & Robotic Joint Specialist
             </span>
           </div>
@@ -46,40 +46,53 @@ export default function Navbar() {
 
         {/* Navigation links */}
         <nav className="hidden lg:flex items-center gap-8">
-          <Link href="#about" className="text-sm font-medium text-headline-dark/90 hover:text-deep-graphite transition-colors">
-            About
-          </Link>
-          <Link href="/services" className="text-sm font-medium text-headline-dark/90 hover:text-deep-graphite transition-colors">
-            Services
-          </Link>
-          <Link href="/expertise" className="text-sm font-medium text-headline-dark/90 hover:text-deep-graphite transition-colors">
-            Expertise
-          </Link>
-          <Link href="#patient-stories" className="text-sm font-medium text-headline-dark/90 hover:text-deep-graphite transition-colors">
-            Patient Stories
-          </Link>
-          <Link href="#resources" className="text-sm font-medium text-headline-dark/90 hover:text-deep-graphite transition-colors">
-            Resources
-          </Link>
-          <Link href="#contact" className="text-sm font-medium text-headline-dark/90 hover:text-deep-graphite transition-colors">
-            Contact
-          </Link>
+          {[
+            { label: "About", href: "/#about" },
+            { label: "Services", href: "/services" },
+            { label: "Expertise", href: "/expertise" },
+            { label: "Patient Stories", href: "/#patient-stories" },
+            { label: "Resources", href: "/#resources" },
+            { label: "Contact", href: "/#contact" },
+          ].map((link) => (
+            <Link
+              key={link.label}
+              href={link.href}
+              className={`text-sm font-medium transition-colors ${
+                isDarkTheme
+                  ? "text-white/90 hover:text-white"
+                  : "text-headline-dark/90 hover:text-deep-graphite"
+              }`}
+            >
+              {link.label}
+            </Link>
+          ))}
         </nav>
 
         {/* Direct Booking Elements */}
         <div className="flex items-center gap-4">
           <a
             href="tel:+919414393320"
-            className="hidden sm:flex items-center gap-2 border border-line-gray px-4 py-2.5 rounded-full text-sm font-semibold text-headline-dark hover:border-deep-graphite hover:bg-surface-white transition-all shadow-sm"
+            className={`hidden sm:flex items-center gap-2 border px-4 py-2.5 rounded-full text-sm font-semibold transition-all shadow-sm ${
+              isDarkTheme
+                ? "border-white/30 text-white hover:bg-white/10 hover:border-white"
+                : "border-line-gray text-headline-dark hover:border-deep-graphite hover:bg-surface-white"
+            }`}
           >
             <PhoneCall size={16} />
             <span>+91 94143 93320</span>
           </a>
-          <Link href="#booking" className="bg-[#0b1b3d] hover:bg-[#132752] text-white py-2.5 px-6 text-sm font-medium rounded-lg flex items-center gap-2 transition-colors">
+          <Link 
+            href="#booking" 
+            className={`py-2.5 px-6 text-sm font-medium rounded-lg flex items-center gap-2 transition-colors ${
+              isDarkTheme
+                ? "bg-white text-[#0b1b3d] hover:bg-gray-100"
+                : "bg-[#0b1b3d] hover:bg-[#132752] text-white"
+            }`}
+          >
             Book Appointment <ArrowRight size={16} />
           </Link>
         </div>
       </div>
-    </motion.header>
+    </header>
   );
 }
