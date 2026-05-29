@@ -50,8 +50,7 @@ export default function Navbar() {
             { label: "About", href: "/#about" },
             { label: "Services", href: "/services" },
             { label: "Expertise", href: "/expertise" },
-            { label: "Patient Stories", href: "/#patient-stories" },
-            { label: "Media & Insights", href: "/news" },
+            { label: "News", href: "/news" },
             { label: "Contact", href: "/#contact" },
           ].map((link) => (
             <Link
