@@ -51,7 +51,7 @@ export default function Navbar() {
             { label: "Services", href: "/services" },
             { label: "Expertise", href: "/expertise" },
             { label: "News", href: "/news" },
-            { label: "Contact", href: "/#contact" },
+            { label: "Contact", href: "/#booking" },
           ].map((link) => (
             <Link
               key={link.label}
@@ -79,7 +79,7 @@ export default function Navbar() {
             <span>+91 94143 93320</span>
           </a>
           <Link
-            href="#booking"
+            href="/#booking"
             className={`py-2.5 px-6 text-sm font-medium rounded-lg flex items-center gap-2 transition-colors ${isDarkTheme
                 ? "bg-white text-[#0b1b3d] hover:bg-gray-100"
                 : "bg-[#0b1b3d] hover:bg-[#132752] text-white"
