@@ -1,4 +1,4 @@
-import Navbar from "@/components/sections/Navbar";
+﻿import Navbar from "@/components/sections/Navbar";
 import Footer from "@/components/sections/Footer";
 import Image from "next/image";
 import Link from "next/link";
@@ -248,103 +248,19 @@ export default function ExpertisePage() {
 
 
         {/* Specialization and Expertise */}
-        <section className="bg-white py-20 border-t border-gray-100 relative overflow-hidden">
-          <div className="max-w-7xl mx-auto px-6 flex flex-col items-center relative z-10">
+        <section className="bg-white py-20 border-t border-gray-100">
+          <div className="max-w-7xl mx-auto px-6 flex flex-col items-center">
             <div className="flex flex-col items-center mb-16">
+              <div className="w-12 h-12 rounded-full border-2 border-blue-100 flex items-center justify-center bg-transparent text-[#0b1b3d] mb-4">
+                <User size={24} strokeWidth={1.5} />
+              </div>
               <h2 className="text-[20px] md:text-[24px] font-serif font-bold text-[#0b1b3d] uppercase tracking-wide text-center">
                 SPECIALIZATION AND EXPERTISE
               </h2>
               <div className="w-16 h-1 bg-blue-600 mt-3" />
             </div>
-            {/* Horizontal Image Callouts (HUD Style) */}
-            <div className="w-full max-w-8xl mx-auto mb-20 relative z-20 flex flex-row justify-center md:justify-between items-end gap-8 md:gap-16 flex-wrap md:flex-nowrap px-4">
-            
-            {/* The continuous horizontal line */}
-            <div className="block absolute top-0 left-0 right-0 h-[1px] bg-black" />
 
-            {/* Callout 1 (Knee) */}
-            <div className="relative flex flex-col items-center flex-1 h-[140px] md:h-[180px]">
-              {/* Branch up (Angled) */}
-              <div className="w-[40px] md:w-[60px] flex-1 z-0 relative">
-                <svg className="absolute inset-0 w-full h-full overflow-visible" viewBox="0 0 60 100" preserveAspectRatio="none">
-                  <path d="M 30 100 L 30 60 L 50 40 L 50 0" fill="none" stroke="black" strokeWidth="1.5" vectorEffect="non-scaling-stroke" />
-                  <circle cx="50" cy="0" r="4" fill="black" className="drop-shadow-[0_0_4px_rgba(0,0,0,0.6)]" />
-                </svg>
-              </div>
-              
-              {/* Outer Ring & Image */}
-              <div className="w-[70px] h-[70px] md:w-[90px] md:h-[90px] rounded-full border border-gray-200 bg-white relative z-10 flex items-center justify-center shadow-md flex-shrink-0 -mt-1">
-                <div className="absolute right-[100%] top-1/2 w-[10px] md:w-[15px] h-[1px] bg-black/50 -translate-y-1/2 z-0" />
-                <div className="absolute left-[100%] top-1/2 w-[10px] md:w-[15px] h-[1px] bg-black/50 -translate-y-1/2 z-0" />
-                <div className="w-[60px] h-[60px] md:w-[78px] md:h-[78px] rounded-full overflow-hidden relative bg-gray-50">
-                  <Image src="/image copy.png" fill className="object-cover" alt="Knee Joint" />
-                </div>
-              </div>
-            </div>
-
-            {/* Callout 2 (Shoulder) */}
-            <div className="relative flex flex-col items-center flex-1 h-[140px] md:h-[180px]">
-              {/* Branch up (Angled) */}
-              <div className="w-[40px] md:w-[60px] flex-1 z-0 relative">
-                <svg className="absolute inset-0 w-full h-full overflow-visible" viewBox="0 0 60 100" preserveAspectRatio="none">
-                  <path d="M 30 100 L 30 70 L 10 50 L 10 0" fill="none" stroke="black" strokeWidth="1.5" vectorEffect="non-scaling-stroke" />
-                  <circle cx="10" cy="0" r="4" fill="black" className="drop-shadow-[0_0_4px_rgba(0,0,0,0.6)]" />
-                </svg>
-              </div>
-              
-              {/* Outer Ring & Image */}
-              <div className="w-[70px] h-[70px] md:w-[90px] md:h-[90px] rounded-full border border-gray-200 bg-white relative z-10 flex items-center justify-center shadow-md flex-shrink-0 -mt-1">
-                <div className="absolute right-[100%] top-1/2 w-[10px] md:w-[15px] h-[1px] bg-black/50 -translate-y-1/2 z-0" />
-                <div className="absolute left-[100%] top-1/2 w-[10px] md:w-[15px] h-[1px] bg-black/50 -translate-y-1/2 z-0" />
-                <div className="w-[60px] h-[60px] md:w-[78px] md:h-[78px] rounded-full overflow-hidden relative bg-gray-50">
-                  <Image src="/image copy 2.png" fill className="object-cover" alt="Shoulder Joint" />
-                </div>
-              </div>
-            </div>
-
-            {/* Callout 3 (Spine) */}
-            <div className="relative flex flex-col items-center flex-1 h-[140px] md:h-[180px]">
-              {/* Branch up (Angled) */}
-              <div className="w-[40px] md:w-[60px] flex-1 z-0 relative">
-                <svg className="absolute inset-0 w-full h-full overflow-visible" viewBox="0 0 60 100" preserveAspectRatio="none">
-                  <path d="M 30 100 L 30 40 L 50 20 L 50 0" fill="none" stroke="black" strokeWidth="1.5" vectorEffect="non-scaling-stroke" />
-                  <circle cx="50" cy="0" r="4" fill="black" className="drop-shadow-[0_0_4px_rgba(0,0,0,0.6)]" />
-                </svg>
-              </div>
-              
-              {/* Outer Ring & Image */}
-              <div className="w-[70px] h-[70px] md:w-[90px] md:h-[90px] rounded-full border border-gray-200 bg-white relative z-10 flex items-center justify-center shadow-md flex-shrink-0 -mt-1">
-                <div className="absolute right-[100%] top-1/2 w-[10px] md:w-[15px] h-[1px] bg-black/50 -translate-y-1/2 z-0" />
-                <div className="absolute left-[100%] top-1/2 w-[10px] md:w-[15px] h-[1px] bg-black/50 -translate-y-1/2 z-0" />
-                <div className="w-[60px] h-[60px] md:w-[78px] md:h-[78px] rounded-full overflow-hidden relative bg-gray-50">
-                  <Image src="/image copy 3.png" fill className="object-cover" alt="Spine Structure" />
-                </div>
-              </div>
-            </div>
-
-            {/* Callout 4 (Neck) */}
-            <div className="relative flex flex-col items-center flex-1 h-[140px] md:h-[180px]">
-              {/* Branch up (Angled) */}
-              <div className="w-[40px] md:w-[60px] flex-1 z-0 relative">
-                <svg className="absolute inset-0 w-full h-full overflow-visible" viewBox="0 0 60 100" preserveAspectRatio="none">
-                  <path d="M 30 100 L 30 80 L 10 60 L 10 0" fill="none" stroke="black" strokeWidth="1.5" vectorEffect="non-scaling-stroke" />
-                  <circle cx="10" cy="0" r="4" fill="black" className="drop-shadow-[0_0_4px_rgba(0,0,0,0.6)]" />
-                </svg>
-              </div>
-              
-              {/* Outer Ring & Image */}
-              <div className="w-[70px] h-[70px] md:w-[90px] md:h-[90px] rounded-full border border-gray-200 bg-white relative z-10 flex items-center justify-center shadow-md flex-shrink-0 -mt-1">
-                <div className="absolute right-[100%] top-1/2 w-[10px] md:w-[15px] h-[1px] bg-black/50 -translate-y-1/2 z-0" />
-                <div className="absolute left-[100%] top-1/2 w-[10px] md:w-[15px] h-[1px] bg-black/50 -translate-y-1/2 z-0" />
-                <div className="w-[60px] h-[60px] md:w-[78px] md:h-[78px] rounded-full overflow-hidden relative bg-gray-50">
-                  <Image src="/image copy 4.png" fill className="object-cover" alt="Cervical Spine" />
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full mt-10">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
               {/* Card 1 */}
               <div className="flex flex-col items-center text-center">
                 <div className="w-40 h-40 rounded-full border-4 border-white shadow-xl overflow-hidden mb-6 relative">
@@ -381,156 +297,205 @@ export default function ExpertisePage() {
               </div>
             </div>
           </div>
-
         </section>
 
-        {/* Certifications and Awards & Recognitions */}
+        {/* Certifications */}
         <section className="bg-white py-20 border-t border-gray-100">
-          <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-0 divide-y lg:divide-y-0 lg:divide-x divide-gray-200">
-            
-            {/* Left Column: Certifications */}
-            <div className="flex flex-col items-center lg:pr-12 pt-8 lg:pt-0">
-              {/* Section Header */}
-              <div className="flex items-center gap-4 mb-4">
-                <div className="w-10 h-10 rounded-full border border-[#1e3a8a]/30 flex items-center justify-center text-[#1e3a8a]">
-                  <ShieldCheck size={20} strokeWidth={1.5} />
-                </div>
-                <h2 className="text-[20px] md:text-[24px] font-serif font-bold text-[#0b1b3d] uppercase tracking-widest text-center">
-                  CERTIFICATIONS
-                </h2>
+          <div className="max-w-6xl mx-auto px-6 flex flex-col items-center">
+            {/* Section Header */}
+            <div className="flex items-center gap-4 mb-4">
+              <div className="w-10 h-10 rounded-full border border-[#1e3a8a]/30 flex items-center justify-center text-[#1e3a8a]">
+                <ShieldCheck size={20} strokeWidth={1.5} />
               </div>
-              <div className="w-16 h-[3px] bg-[#1e3a8a] mb-12" />
+              <h2 className="text-[22px] md:text-[26px] font-serif font-bold text-[#0b1b3d] uppercase tracking-widest">
+                CERTIFICATIONS
+              </h2>
+            </div>
+            <div className="w-16 h-[3px] bg-[#1e3a8a] mb-14" />
 
-              <div className="flex flex-col gap-10 w-full max-w-md mx-auto">
-                {/* Cert Card 1 */}
-                <div className="flex items-start gap-5">
-                  <div className="relative flex-shrink-0 w-[90px] h-[90px]">
-                    <Image src="/award_wheat_wreath_in_navy_gradient.svg" alt="Certification Wreath" fill className="object-contain" />
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <BadgeCheck className="text-[#1e3a8a] w-7 h-7 opacity-90 mb-2" strokeWidth={1.5} />
-                    </div>
-                  </div>
-                  <div className="pt-2">
-                    <h3 className="text-[15px] font-bold text-[#0b1b3d] leading-snug mb-2">
-                      Certified in Robotic<br />Surgery Techniques
-                    </h3>
-                    <p className="text-[12px] text-gray-500 leading-relaxed">
-                      Recognized expertise in robotic-assisted orthopedic surgical procedures.
-                    </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-10 w-full">
+
+              {/* Cert Card 1 */}
+              <div className="flex items-start gap-5">
+                <div className="relative flex-shrink-0 w-[110px] h-[110px]">
+                  <Image src="/award_wheat_wreath_in_navy_gradient.svg" alt="Certification Wreath" fill className="object-contain" />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <BadgeCheck className="text-[#1e3a8a] w-8 h-8 opacity-90 mb-3" strokeWidth={1.5} />
                   </div>
                 </div>
+                <div className="pt-2">
+                  <h3 className="text-[15px] font-bold text-[#0b1b3d] leading-snug mb-2">
+                    Certified in Robotic<br />Surgery Techniques
+                  </h3>
+                  <p className="text-[12px] text-gray-500 leading-relaxed">
+                    Recognized expertise in robotic-assisted orthopedic surgical procedures.
+                  </p>
+                </div>
+              </div>
 
-                {/* Cert Card 2 */}
-                <div className="flex items-start gap-5">
-                  <div className="relative flex-shrink-0 w-[90px] h-[90px]">
-                    <Image src="/award_wheat_wreath_in_navy_gradient.svg" alt="Certification Wreath" fill className="object-contain" />
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <FileBadge className="text-[#1e3a8a] w-7 h-7 opacity-90 mb-2" strokeWidth={1.5} />
-                    </div>
-                  </div>
-                  <div className="pt-2">
-                    <h3 className="text-[15px] font-bold text-[#0b1b3d] leading-snug mb-2">
-                      Advanced Training in<br />Joint Replacement Procedures
-                    </h3>
-                    <p className="text-[12px] text-gray-500 leading-relaxed">
-                      Specialized training in advanced joint replacement techniques for better outcomes.
-                    </p>
+              {/* Cert Card 2 */}
+              <div className="flex items-start gap-5">
+                <div className="relative flex-shrink-0 w-[110px] h-[110px]">
+                  <Image src="/award_wheat_wreath_in_navy_gradient.svg" alt="Certification Wreath" fill className="object-contain" />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <FileBadge className="text-[#1e3a8a] w-8 h-8 opacity-90 mb-3" strokeWidth={1.5} />
                   </div>
                 </div>
+                <div className="pt-2">
+                  <h3 className="text-[15px] font-bold text-[#0b1b3d] leading-snug mb-2">
+                    Advanced Training in<br />Joint Replacement Procedures
+                  </h3>
+                  <p className="text-[12px] text-gray-500 leading-relaxed">
+                    Specialized training in advanced joint replacement techniques for better outcomes.
+                  </p>
+                </div>
+              </div>
 
-                {/* Cert Card 3 */}
-                <div className="flex items-start gap-5">
-                  <div className="relative flex-shrink-0 w-[90px] h-[90px]">
-                    <Image src="/award_wheat_wreath_in_navy_gradient.svg" alt="Certification Wreath" fill className="object-contain" />
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <GraduationCap className="text-[#1e3a8a] w-7 h-7 opacity-90 mb-2" strokeWidth={1.5} />
-                    </div>
-                  </div>
-                  <div className="pt-2">
-                    <h3 className="text-[15px] font-bold text-[#0b1b3d] leading-snug mb-2">
-                      Fellowship in Spine Surgery<br />from a Recognized Institution
-                    </h3>
-                    <p className="text-[12px] text-gray-500 leading-relaxed">
-                      Advanced fellowship ensuring expertise in complex spine surgical procedures.
-                    </p>
+              {/* Cert Card 3 */}
+              <div className="flex items-start gap-5">
+                <div className="relative flex-shrink-0 w-[110px] h-[110px]">
+                  <Image src="/award_wheat_wreath_in_navy_gradient.svg" alt="Certification Wreath" fill className="object-contain" />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <GraduationCap className="text-[#1e3a8a] w-8 h-8 opacity-90 mb-3" strokeWidth={1.5} />
                   </div>
                 </div>
+                <div className="pt-2">
+                  <h3 className="text-[15px] font-bold text-[#0b1b3d] leading-snug mb-2">
+                    Fellowship in Spine Surgery<br />from a Recognized Institution
+                  </h3>
+                  <p className="text-[12px] text-gray-500 leading-relaxed">
+                    Advanced fellowship ensuring expertise in complex spine surgical procedures.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        {/* Awards & Recognitions */}
+        <section className="bg-[#f8fafc] py-20 border-t border-gray-100">
+          <div className="max-w-6xl mx-auto px-6 flex flex-col items-center">
+            <div className="flex items-center gap-4 mb-4">
+              <div className="w-10 h-10 rounded-full border border-[#1e3a8a]/30 flex items-center justify-center text-[#1e3a8a]">
+                <Trophy size={20} strokeWidth={1.5} />
+              </div>
+              <h2 className="text-[22px] md:text-[26px] font-serif font-bold text-[#0b1b3d] uppercase tracking-widest">
+                AWARDS & RECOGNITIONS
+              </h2>
+            </div>
+            <div className="w-16 h-[3px] bg-[#1e3a8a] mb-14" />
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-10 w-full">
+
+              {/* Award 1 - Gold Star */}
+              <div className="flex items-start gap-5">
+                <div className="relative flex-shrink-0 w-[110px] h-[110px]">
+                  <Image src="/award_wheat_wreath_in_gold_gradient.svg" alt="Award Wreath" fill className="object-contain" />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <Trophy className="text-[#b45309] w-8 h-8 opacity-90 mb-3" strokeWidth={1.5} />
+                  </div>
+                </div>
+                <div className="pt-2">
+                  <h3 className="text-[15px] font-bold text-[#92400e] leading-snug mb-2">
+                    Excellence in<br />Orthopedic Surgery Award
+                  </h3>
+                  <p className="text-[12px] text-gray-500 leading-relaxed">
+                    Honored for exceptional contributions to the field of orthopedic surgery.
+                  </p>
+                </div>
+              </div>
+
+              {/* Award 2 - Spine */}
+              <div className="flex items-start gap-5">
+                <div className="relative flex-shrink-0 w-[110px] h-[110px]">
+                  <Image src="/award_wheat_wreath_in_gold_gradient.svg" alt="Award Wreath" fill className="object-contain" />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <Medal className="text-[#b45309] w-8 h-8 opacity-90 mb-3" strokeWidth={1.5} />
+                  </div>
+                </div>
+                <div className="pt-2">
+                  <h3 className="text-[15px] font-bold text-[#92400e] leading-snug mb-2">
+                    Outstanding Contributions<br />to Spine Surgery
+                  </h3>
+                  <p className="text-[12px] text-gray-500 leading-relaxed">
+                    Recognized for pioneering advancements and exceptional patient outcomes.
+                  </p>
+                </div>
+              </div>
+
+              {/* Award 3 - Hands */}
+              <div className="flex items-start gap-5">
+                <div className="relative flex-shrink-0 w-[110px] h-[110px]">
+                  <Image src="/award_wheat_wreath_in_gold_gradient.svg" alt="Award Wreath" fill className="object-contain" />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <Heart className="text-[#b45309] w-8 h-8 opacity-90 mb-3" strokeWidth={1.5} />
+                  </div>
+                </div>
+                <div className="pt-2">
+                  <h3 className="text-[15px] font-bold text-[#92400e] leading-snug mb-2">
+                    Patient-Centric Approach<br />and Compassionate Care
+                  </h3>
+                  <p className="text-[12px] text-gray-500 leading-relaxed">
+                    Honored for dedication to patient well-being and compassionate treatment.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        {/* Stats Banner */}
+        <section className="bg-[#0b1b3d] py-16">
+          <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 divide-x divide-white/10">
+
+            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 px-4 text-center sm:text-left">
+              <div className="w-12 h-12 flex items-center justify-center text-[#a5b4fc] flex-shrink-0">
+                <CalendarDays size={36} strokeWidth={1.5} />
+              </div>
+              <div>
+                <h4 className="text-3xl font-bold text-white mb-1">10+</h4>
+                <p className="text-[13px] font-bold text-white/90 mb-1">Years of Experience</p>
+                <p className="text-[11px] text-white/60 leading-tight">Delivering excellence in orthopedic care</p>
               </div>
             </div>
 
-            {/* Right Column: Awards & Recognitions */}
-            <div className="flex flex-col items-center lg:pl-12 pt-16 lg:pt-0">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="w-10 h-10 rounded-full border border-[#1e3a8a]/30 flex items-center justify-center text-[#1e3a8a]">
-                  <Trophy size={20} strokeWidth={1.5} />
-                </div>
-                <h2 className="text-[20px] md:text-[24px] font-serif font-bold text-[#0b1b3d] uppercase tracking-widest text-center">
-                  AWARDS & RECOGNITIONS
-                </h2>
+            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 px-4 text-center sm:text-left">
+              <div className="w-12 h-12 flex items-center justify-center text-[#a5b4fc] flex-shrink-0">
+                <User size={36} strokeWidth={1.5} />
               </div>
-              <div className="w-16 h-[3px] bg-[#1e3a8a] mb-12" />
+              <div>
+                <h4 className="text-3xl font-bold text-white mb-1">1000+</h4>
+                <p className="text-[13px] font-bold text-white/90 mb-1">Successful Surgeries</p>
+                <p className="text-[11px] text-white/60 leading-tight">Robotic, spine and joint replacement surgeries</p>
+              </div>
+            </div>
 
-              <div className="flex flex-col gap-10 w-full max-w-md mx-auto">
-                {/* Award 1 - Gold Star */}
-                <div className="flex items-start gap-5">
-                  <div className="relative flex-shrink-0 w-[90px] h-[90px]">
-                    <Image src="/award_wheat_wreath_in_gold_gradient.svg" alt="Award Wreath" fill className="object-contain" />
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <Trophy className="text-[#b45309] w-7 h-7 opacity-90 mb-2" strokeWidth={1.5} />
-                    </div>
-                  </div>
-                  <div className="pt-2">
-                    <h3 className="text-[15px] font-bold text-[#92400e] leading-snug mb-2">
-                      Excellence in<br />Orthopedic Surgery Award
-                    </h3>
-                    <p className="text-[12px] text-gray-500 leading-relaxed">
-                      Honored for exceptional contributions to the field of orthopedic surgery.
-                    </p>
-                  </div>
-                </div>
+            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 px-4 text-center sm:text-left">
+              <div className="w-12 h-12 flex items-center justify-center text-[#a5b4fc] flex-shrink-0">
+                <Users size={36} strokeWidth={1.5} />
+              </div>
+              <div>
+                <h4 className="text-3xl font-bold text-white mb-1">5000+</h4>
+                <p className="text-[13px] font-bold text-white/90 mb-1">Patients Treated</p>
+                <p className="text-[11px] text-white/60 leading-tight">Restoring mobility and improving quality of life</p>
+              </div>
+            </div>
 
-                {/* Award 2 - Spine */}
-                <div className="flex items-start gap-5">
-                  <div className="relative flex-shrink-0 w-[90px] h-[90px]">
-                    <Image src="/award_wheat_wreath_in_gold_gradient.svg" alt="Award Wreath" fill className="object-contain" />
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <Medal className="text-[#b45309] w-7 h-7 opacity-90 mb-2" strokeWidth={1.5} />
-                    </div>
-                  </div>
-                  <div className="pt-2">
-                    <h3 className="text-[15px] font-bold text-[#92400e] leading-snug mb-2">
-                      Outstanding Contributions<br />to Spine Surgery
-                    </h3>
-                    <p className="text-[12px] text-gray-500 leading-relaxed">
-                      Recognized for pioneering advancements and exceptional patient outcomes.
-                    </p>
-                  </div>
-                </div>
-
-                {/* Award 3 - Hands */}
-                <div className="flex items-start gap-5">
-                  <div className="relative flex-shrink-0 w-[90px] h-[90px]">
-                    <Image src="/award_wheat_wreath_in_gold_gradient.svg" alt="Award Wreath" fill className="object-contain" />
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <Heart className="text-[#b45309] w-7 h-7 opacity-90 mb-2" strokeWidth={1.5} />
-                    </div>
-                  </div>
-                  <div className="pt-2">
-                    <h3 className="text-[15px] font-bold text-[#92400e] leading-snug mb-2">
-                      Patient-Centric Approach<br />and Compassionate Care
-                    </h3>
-                    <p className="text-[12px] text-gray-500 leading-relaxed">
-                      Honored for dedication to patient well-being and compassionate treatment.
-                    </p>
-                  </div>
-                </div>
+            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 px-4 text-center sm:text-left">
+              <div className="w-12 h-12 flex items-center justify-center text-[#a5b4fc] flex-shrink-0">
+                <Award size={36} strokeWidth={1.5} />
+              </div>
+              <div>
+                <h4 className="text-3xl font-bold text-white mb-1">&nbsp;</h4>
+                <p className="text-[14px] font-bold text-white/90 mb-1 mt-[-20px] md:mt-0">Excellence<br />in Care</p>
+                <p className="text-[11px] text-white/60 leading-tight mt-1">Committed to innovation, precision and compassion</p>
               </div>
             </div>
 
           </div>
         </section>
-
-
 
       </main>
       <Footer />

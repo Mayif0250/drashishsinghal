@@ -15,7 +15,21 @@ import {
   Phone
 } from "lucide-react";
 
-const services = [
+type ServiceItem = {
+  id: number;
+  title: string;
+  desc: string;
+  listTitle: string;
+  list: string[];
+  image: string;
+  imagePos: string;
+  icon: React.ElementType;
+  buttons?: boolean;
+  singleButton?: boolean;
+  twoColList?: boolean;
+};
+
+const services: ServiceItem[] = [
   {
     id: 1,
     title: "Knee Replacement with\nWorld's Best Robotic\nTechnology",
