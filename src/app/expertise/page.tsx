@@ -133,27 +133,20 @@ export default function ExpertisePage() {
             {/* Timeline Layout */}
             <div className="relative w-full max-w-6xl">
               {/* Horizontal Line Background */}
-              <div className="hidden md:block absolute top-[60px] left-[10%] right-[10%] h-[2px] bg-[#1e3a8a] z-0 opacity-70">
-                {/* Arrows on the line */}
-                <div className="absolute top-1/2 left-[25%] -translate-y-1/2 -translate-x-1/2 bg-white px-1">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a8a" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M15 18l-6-6 6-6" /></svg>
+              <div className="hidden md:block absolute top-[60px] left-[16.66%] right-[16.66%] h-[2px] bg-[#1e3a8a] z-0 opacity-70">
+                {/* Diamonds on the line */}
+                <div className="absolute top-1/2 left-[25%] -translate-y-1/2 -translate-x-1/2 bg-white px-2">
+                  <div className="w-2.5 h-2.5 bg-[#1e3a8a] rotate-45 rounded-[1px]" />
                 </div>
-                <div className="absolute top-1/2 left-[58%] -translate-y-1/2 -translate-x-1/2 bg-white px-1">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a8a" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M15 18l-6-6 6-6" /></svg>
-                </div>
-                <div className="absolute top-1/2 left-[91%] -translate-y-1/2 -translate-x-1/2 bg-white px-1">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e3a8a" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M15 18l-6-6 6-6" /></svg>
-                </div>
-                {/* Arrow at the very end */}
-                <div className="absolute top-1/2 -right-4 -translate-y-1/2">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1e3a8a" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M9 18l6-6-6-6" /></svg>
+                <div className="absolute top-1/2 left-[75%] -translate-y-1/2 -translate-x-1/2 bg-white px-2">
+                  <div className="w-2.5 h-2.5 bg-[#1e3a8a] rotate-45 rounded-[1px]" />
                 </div>
               </div>
 
               {/* Mobile Vertical Line */}
               <div className="block md:hidden absolute left-1/2 top-0 bottom-0 w-[2px] bg-[#1e3a8a] opacity-50 -translate-x-1/2 z-0" />
 
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-y-16 relative z-10">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-y-16 relative z-10">
 
                 {/* Node 1 */}
                 <div className="flex flex-col items-center text-center px-2 relative">
@@ -220,27 +213,6 @@ export default function ExpertisePage() {
                   </p>
                 </div>
 
-                {/* Node 4 */}
-                <div className="flex flex-col items-center text-center px-2 relative">
-                  <div className="relative w-[120px] h-[120px] flex items-center justify-center bg-white rounded-full mb-6 mx-auto">
-                    <div className="absolute inset-0 rounded-full border border-dashed border-[#1e3a8a]/40 m-1" />
-                    <div className="absolute inset-2 rounded-full border border-[#1e3a8a]/20" />
-                    <div className="absolute inset-3 rounded-full bg-[#0b1b3d] flex items-center justify-center shadow-lg">
-                      {/* Document with Checkmark Icon */}
-                      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" className="text-white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-                        <polyline points="14 2 14 8 20 8" />
-                        <path d="M16 13H8" />
-                        <path d="M16 17H8" />
-                        <path d="M10 9H8" />
-                        <circle cx="18" cy="18" r="5" fill="#0b1b3d" stroke="currentColor" strokeWidth="1.5" />
-                        <path d="M16.5 18l1 1 2-2" stroke="white" strokeWidth="1.5" />
-                      </svg>
-                    </div>
-                  </div>
-                  {/* Empty text area as per design, maintains alignment */}
-                </div>
-
               </div>
             </div>
           </div>
@@ -256,128 +228,125 @@ export default function ExpertisePage() {
               </h2>
               <div className="w-16 h-1 bg-blue-600 mt-3" />
             </div>
-            {/* Horizontal Image Callouts (HUD Style) */}
-            <div className="w-full max-w-[99%] mx-auto mb-20 relative z-20 flex flex-row justify-center md:justify-between items-end gap-8 md:gap-16 flex-wrap md:flex-nowrap px-4">
-            
-            {/* The continuous horizontal line */}
-            <div className="block absolute top-0 left-0 right-0 h-[1px] bg-black" />
+            {/* Interleaved HUD and Grid Section */}
+            <div className="w-full max-w-[99%] mx-auto relative z-20 flex flex-col md:flex-row justify-center md:justify-between items-center md:items-start gap-8 md:gap-4 flex-wrap md:flex-nowrap px-4 mt-10">
 
-            {/* Callout 1 (Knee) */}
-            <div className="relative flex flex-col items-center flex-1 h-[140px] md:h-[180px]">
-              {/* Branch up (Angled) */}
-              <div className="w-[40px] md:w-[60px] flex-1 z-0 relative">
-                <svg className="absolute inset-0 w-full h-full overflow-visible" viewBox="0 0 60 100" preserveAspectRatio="none">
-                  <path d="M 30 100 L 30 60 L 50 40 L 50 0" fill="none" stroke="black" strokeWidth="1.5" vectorEffect="non-scaling-stroke" />
-                  <circle cx="50" cy="0" r="4" fill="black" className="drop-shadow-[0_0_4px_rgba(0,0,0,0.6)]" />
-                </svg>
-              </div>
-              
-              {/* Outer Ring & Image */}
-              <div className="w-[70px] h-[70px] md:w-[90px] md:h-[90px] rounded-full border border-gray-200 bg-white relative z-10 flex items-center justify-center shadow-md flex-shrink-0 -mt-1">
-                <div className="absolute right-[100%] top-1/2 w-[10px] md:w-[15px] h-[1px] bg-black/50 -translate-y-1/2 z-0" />
-                <div className="absolute left-[100%] top-1/2 w-[10px] md:w-[15px] h-[1px] bg-black/50 -translate-y-1/2 z-0" />
-                <div className="w-[60px] h-[60px] md:w-[78px] md:h-[78px] rounded-full overflow-hidden relative bg-gray-50">
-                  <Image src="/image copy.png" fill className="object-cover" alt="Knee Joint" />
+              {/* The continuous horizontal line connecting branches */}
+              <div className="hidden md:block absolute top-[80px] left-[81px] right-[81px] h-[1.5px] bg-black z-0 opacity-80" />
+
+              {/* Callout 1 (Knee) */}
+              <div className="relative flex flex-col items-center flex-shrink-0 h-[140px] md:h-[200px] mb-8 md:mb-0 md:mt-[80px] z-10">
+                {/* Branch up (Angled) */}
+                <div className="w-[40px] md:w-[60px] flex-1 z-0 relative">
+                  <svg className="absolute inset-0 w-full h-full overflow-visible" viewBox="0 0 60 100" preserveAspectRatio="none">
+                    <path d="M 30 100 L 30 60 L 50 40 L 50 0" fill="none" stroke="black" strokeWidth="1.5" vectorEffect="non-scaling-stroke" />
+                    <circle cx="50" cy="0" r="4" fill="black" className="drop-shadow-[0_0_4px_rgba(0,0,0,0.6)]" />
+                  </svg>
+                </div>
+                
+                {/* Outer Ring & Image */}
+                <div className="w-[70px] h-[70px] md:w-[90px] md:h-[90px] rounded-full border border-gray-200 bg-white relative z-10 flex items-center justify-center shadow-md flex-shrink-0 -mt-1">
+                  <div className="absolute right-[100%] top-1/2 w-[10px] md:w-[15px] h-[1px] bg-black/50 -translate-y-1/2 z-0" />
+                  <div className="absolute left-[100%] top-1/2 w-[10px] md:w-[15px] h-[1px] bg-black/50 -translate-y-1/2 z-0" />
+                  <div className="w-[60px] h-[60px] md:w-[78px] md:h-[78px] rounded-full overflow-hidden relative bg-gray-50">
+                    <Image src="/image copy.png" fill className="object-cover" alt="Knee Joint" />
+                  </div>
                 </div>
               </div>
-            </div>
 
-            {/* Callout 2 (Shoulder) */}
-            <div className="relative flex flex-col items-center flex-1 h-[140px] md:h-[180px]">
-              {/* Branch up (Angled) */}
-              <div className="w-[40px] md:w-[60px] flex-1 z-0 relative">
-                <svg className="absolute inset-0 w-full h-full overflow-visible" viewBox="0 0 60 100" preserveAspectRatio="none">
-                  <path d="M 30 100 L 30 70 L 10 50 L 10 0" fill="none" stroke="black" strokeWidth="1.5" vectorEffect="non-scaling-stroke" />
-                  <circle cx="10" cy="0" r="4" fill="black" className="drop-shadow-[0_0_4px_rgba(0,0,0,0.6)]" />
-                </svg>
-              </div>
-              
-              {/* Outer Ring & Image */}
-              <div className="w-[70px] h-[70px] md:w-[90px] md:h-[90px] rounded-full border border-gray-200 bg-white relative z-10 flex items-center justify-center shadow-md flex-shrink-0 -mt-1">
-                <div className="absolute right-[100%] top-1/2 w-[10px] md:w-[15px] h-[1px] bg-black/50 -translate-y-1/2 z-0" />
-                <div className="absolute left-[100%] top-1/2 w-[10px] md:w-[15px] h-[1px] bg-black/50 -translate-y-1/2 z-0" />
-                <div className="w-[60px] h-[60px] md:w-[78px] md:h-[78px] rounded-full overflow-hidden relative bg-gray-50">
-                  <Image src="/image copy 2.png" fill className="object-cover" alt="Shoulder Joint" />
-                </div>
-              </div>
-            </div>
-
-            {/* Callout 3 (Spine) */}
-            <div className="relative flex flex-col items-center flex-1 h-[140px] md:h-[180px]">
-              {/* Branch up (Angled) */}
-              <div className="w-[40px] md:w-[60px] flex-1 z-0 relative">
-                <svg className="absolute inset-0 w-full h-full overflow-visible" viewBox="0 0 60 100" preserveAspectRatio="none">
-                  <path d="M 30 100 L 30 40 L 50 20 L 50 0" fill="none" stroke="black" strokeWidth="1.5" vectorEffect="non-scaling-stroke" />
-                  <circle cx="50" cy="0" r="4" fill="black" className="drop-shadow-[0_0_4px_rgba(0,0,0,0.6)]" />
-                </svg>
-              </div>
-              
-              {/* Outer Ring & Image */}
-              <div className="w-[70px] h-[70px] md:w-[90px] md:h-[90px] rounded-full border border-gray-200 bg-white relative z-10 flex items-center justify-center shadow-md flex-shrink-0 -mt-1">
-                <div className="absolute right-[100%] top-1/2 w-[10px] md:w-[15px] h-[1px] bg-black/50 -translate-y-1/2 z-0" />
-                <div className="absolute left-[100%] top-1/2 w-[10px] md:w-[15px] h-[1px] bg-black/50 -translate-y-1/2 z-0" />
-                <div className="w-[60px] h-[60px] md:w-[78px] md:h-[78px] rounded-full overflow-hidden relative bg-gray-50">
-                  <Image src="/image copy 3.png" fill className="object-cover" alt="Spine Structure" />
-                </div>
-              </div>
-            </div>
-
-            {/* Callout 4 (Neck) */}
-            <div className="relative flex flex-col items-center flex-1 h-[140px] md:h-[180px]">
-              {/* Branch up (Angled) */}
-              <div className="w-[40px] md:w-[60px] flex-1 z-0 relative">
-                <svg className="absolute inset-0 w-full h-full overflow-visible" viewBox="0 0 60 100" preserveAspectRatio="none">
-                  <path d="M 30 100 L 30 80 L 10 60 L 10 0" fill="none" stroke="black" strokeWidth="1.5" vectorEffect="non-scaling-stroke" />
-                  <circle cx="10" cy="0" r="4" fill="black" className="drop-shadow-[0_0_4px_rgba(0,0,0,0.6)]" />
-                </svg>
-              </div>
-              
-              {/* Outer Ring & Image */}
-              <div className="w-[70px] h-[70px] md:w-[90px] md:h-[90px] rounded-full border border-gray-200 bg-white relative z-10 flex items-center justify-center shadow-md flex-shrink-0 -mt-1">
-                <div className="absolute right-[100%] top-1/2 w-[10px] md:w-[15px] h-[1px] bg-black/50 -translate-y-1/2 z-0" />
-                <div className="absolute left-[100%] top-1/2 w-[10px] md:w-[15px] h-[1px] bg-black/50 -translate-y-1/2 z-0" />
-                <div className="w-[60px] h-[60px] md:w-[78px] md:h-[78px] rounded-full overflow-hidden relative bg-gray-50">
-                  <Image src="/image copy 4.png" fill className="object-cover" alt="Cervical Spine" />
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full mt-10">
               {/* Card 1 */}
-              <div className="flex flex-col items-center text-center">
+              <div className="flex flex-col items-center text-center flex-1 max-w-[280px] w-full relative z-10">
                 <div className="w-40 h-40 rounded-full border-4 border-white shadow-xl overflow-hidden mb-6 relative">
                   <Image src="/image copy 8.png" alt="Spine Surgery" fill className="object-cover" />
                 </div>
-                <h3 className="text-[17px] font-bold text-[#0b1b3d] mb-3">Orthopedic Spine Surgery</h3>
-                <p className="text-[13px] text-gray-500 leading-relaxed max-w-xs">
+                <h3 className="text-[17px] font-bold text-[#0b1b3d] mb-3 bg-white px-2 rounded-lg">Orthopedic Spine Surgery</h3>
+                <p className="text-[13px] text-gray-500 leading-relaxed max-w-xs bg-white px-2 rounded-lg">
                   Expertise in treating complex spine disorders with advanced surgical techniques, ensuring stability and pain relief.
                 </p>
               </div>
 
+              {/* Callout 2 (Shoulder) */}
+              <div className="relative flex flex-col items-center flex-shrink-0 h-[140px] md:h-[200px] mb-8 md:mb-0 md:mt-[80px] z-10">
+                {/* Branch up (Angled) */}
+                <div className="w-[40px] md:w-[60px] flex-1 z-0 relative">
+                  <svg className="absolute inset-0 w-full h-full overflow-visible" viewBox="0 0 60 100" preserveAspectRatio="none">
+                    <path d="M 30 100 L 30 70 L 10 50 L 10 0" fill="none" stroke="black" strokeWidth="1.5" vectorEffect="non-scaling-stroke" />
+                    <circle cx="10" cy="0" r="4" fill="black" className="drop-shadow-[0_0_4px_rgba(0,0,0,0.6)]" />
+                  </svg>
+                </div>
+                
+                {/* Outer Ring & Image */}
+                <div className="w-[70px] h-[70px] md:w-[90px] md:h-[90px] rounded-full border border-gray-200 bg-white relative z-10 flex items-center justify-center shadow-md flex-shrink-0 -mt-1">
+                  <div className="absolute right-[100%] top-1/2 w-[10px] md:w-[15px] h-[1px] bg-black/50 -translate-y-1/2 z-0" />
+                  <div className="absolute left-[100%] top-1/2 w-[10px] md:w-[15px] h-[1px] bg-black/50 -translate-y-1/2 z-0" />
+                  <div className="w-[60px] h-[60px] md:w-[78px] md:h-[78px] rounded-full overflow-hidden relative bg-gray-50">
+                    <Image src="/image copy 2.png" fill className="object-cover" alt="Shoulder Joint" />
+                  </div>
+                </div>
+              </div>
+
               {/* Card 2 */}
-              <div className="flex flex-col items-center text-center">
+              <div className="flex flex-col items-center text-center flex-1 max-w-[280px] w-full relative z-10">
                 <div className="w-40 h-40 rounded-full border-4 border-white shadow-xl overflow-hidden mb-6 relative">
                   <Image src="/image.png" alt="Robotic Surgery" fill className="object-cover" />
                 </div>
-                <h3 className="text-[17px] font-bold text-[#0b1b3d] mb-3">Robotic Surgery</h3>
-                <p className="text-[13px] text-gray-500 leading-relaxed max-w-xs">
+                <h3 className="text-[17px] font-bold text-[#0b1b3d] mb-3 bg-white px-2 rounded-lg">Robotic Surgery</h3>
+                <p className="text-[13px] text-gray-500 leading-relaxed max-w-xs bg-white px-2 rounded-lg">
                   Pioneer in robotic-assisted surgeries for precision, minimal invasiveness, and faster recovery.
                 </p>
               </div>
 
+              {/* Callout 3 (Spine) */}
+              <div className="relative flex flex-col items-center flex-shrink-0 h-[140px] md:h-[200px] mb-8 md:mb-0 md:mt-[80px] z-10">
+                {/* Branch up (Angled) */}
+                <div className="w-[40px] md:w-[60px] flex-1 z-0 relative">
+                  <svg className="absolute inset-0 w-full h-full overflow-visible" viewBox="0 0 60 100" preserveAspectRatio="none">
+                    <path d="M 30 100 L 30 40 L 50 20 L 50 0" fill="none" stroke="black" strokeWidth="1.5" vectorEffect="non-scaling-stroke" />
+                    <circle cx="50" cy="0" r="4" fill="black" className="drop-shadow-[0_0_4px_rgba(0,0,0,0.6)]" />
+                  </svg>
+                </div>
+                
+                {/* Outer Ring & Image */}
+                <div className="w-[70px] h-[70px] md:w-[90px] md:h-[90px] rounded-full border border-gray-200 bg-white relative z-10 flex items-center justify-center shadow-md flex-shrink-0 -mt-1">
+                  <div className="absolute right-[100%] top-1/2 w-[10px] md:w-[15px] h-[1px] bg-black/50 -translate-y-1/2 z-0" />
+                  <div className="absolute left-[100%] top-1/2 w-[10px] md:w-[15px] h-[1px] bg-black/50 -translate-y-1/2 z-0" />
+                  <div className="w-[60px] h-[60px] md:w-[78px] md:h-[78px] rounded-full overflow-hidden relative bg-gray-50">
+                    <Image src="/image copy 3.png" fill className="object-cover" alt="Spine Structure" />
+                  </div>
+                </div>
+              </div>
+
               {/* Card 3 */}
-              <div className="flex flex-col items-center text-center">
+              <div className="flex flex-col items-center text-center flex-1 max-w-[280px] w-full relative z-10">
                 <div className="w-40 h-40 rounded-full border-4 border-white shadow-xl overflow-hidden mb-6 relative">
                   <Image src="/image copy.png" alt="Joint Replacement" fill className="object-cover" />
                 </div>
-                <h3 className="text-[17px] font-bold text-[#0b1b3d] mb-3">
+                <h3 className="text-[17px] font-bold text-[#0b1b3d] mb-3 bg-white px-2 rounded-lg">
                   Joint Replacement<br />(Knee, Shoulder, and Back)
                 </h3>
-                <p className="text-[13px] text-gray-500 leading-relaxed max-w-xs">
+                <p className="text-[13px] text-gray-500 leading-relaxed max-w-xs bg-white px-2 rounded-lg">
                   Specialized in joint replacement procedures improving mobility and enhancing quality of life.
                 </p>
+              </div>
+
+              {/* Callout 4 (Neck) */}
+              <div className="relative flex flex-col items-center flex-shrink-0 h-[140px] md:h-[200px] mb-8 md:mb-0 md:mt-[80px] z-10">
+                {/* Branch up (Angled) */}
+                <div className="w-[40px] md:w-[60px] flex-1 z-0 relative">
+                  <svg className="absolute inset-0 w-full h-full overflow-visible" viewBox="0 0 60 100" preserveAspectRatio="none">
+                    <path d="M 30 100 L 30 80 L 10 60 L 10 0" fill="none" stroke="black" strokeWidth="1.5" vectorEffect="non-scaling-stroke" />
+                    <circle cx="10" cy="0" r="4" fill="black" className="drop-shadow-[0_0_4px_rgba(0,0,0,0.6)]" />
+                  </svg>
+                </div>
+                
+                {/* Outer Ring & Image */}
+                <div className="w-[70px] h-[70px] md:w-[90px] md:h-[90px] rounded-full border border-gray-200 bg-white relative z-10 flex items-center justify-center shadow-md flex-shrink-0 -mt-1">
+                  <div className="absolute right-[100%] top-1/2 w-[10px] md:w-[15px] h-[1px] bg-black/50 -translate-y-1/2 z-0" />
+                  <div className="absolute left-[100%] top-1/2 w-[10px] md:w-[15px] h-[1px] bg-black/50 -translate-y-1/2 z-0" />
+                  <div className="w-[60px] h-[60px] md:w-[78px] md:h-[78px] rounded-full overflow-hidden relative bg-gray-50">
+                    <Image src="/image copy 4.png" fill className="object-cover" alt="Cervical Spine" />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
