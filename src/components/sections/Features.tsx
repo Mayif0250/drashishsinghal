@@ -111,7 +111,7 @@ export default function Services() {
                 </p>
 
                 <Link
-                  href="#contact"
+                  href="/services"
                   className="inline-flex items-center gap-2 text-[#3b5998] text-[13px] font-medium border-b border-[#3b5998] pb-0.5 hover:text-[#0b1b3d] hover:border-[#0b1b3d] transition-colors"
                 >
                   Learn More <ArrowRight size={14} />
