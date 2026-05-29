@@ -10,7 +10,7 @@ export default function Navbar() {
   const [mounted, setMounted] = useState(false);
   const pathname = usePathname();
 
-  const isDarkTheme = !scrolled && (pathname === "/expertise" || pathname === "/services");
+  const isDarkTheme = !scrolled && (pathname === "/expertise" || pathname === "/services" || pathname === "/news");
 
   useEffect(() => {
     setMounted(true);
@@ -51,17 +51,16 @@ export default function Navbar() {
             { label: "Services", href: "/services" },
             { label: "Expertise", href: "/expertise" },
             { label: "Patient Stories", href: "/#patient-stories" },
-            { label: "Resources", href: "/#resources" },
+            { label: "Media & Insights", href: "/news" },
             { label: "Contact", href: "/#contact" },
           ].map((link) => (
             <Link
               key={link.label}
               href={link.href}
-              className={`text-sm font-medium transition-colors ${
-                isDarkTheme
+              className={`text-sm font-medium transition-colors ${isDarkTheme
                   ? "text-white/90 hover:text-white"
                   : "text-headline-dark/90 hover:text-deep-graphite"
-              }`}
+                }`}
             >
               {link.label}
             </Link>
@@ -72,22 +71,20 @@ export default function Navbar() {
         <div className="flex items-center gap-4">
           <a
             href="tel:+919414393320"
-            className={`hidden sm:flex items-center gap-2 border px-4 py-2.5 rounded-full text-sm font-semibold transition-all shadow-sm ${
-              isDarkTheme
+            className={`hidden sm:flex items-center gap-2 border px-4 py-2.5 rounded-full text-sm font-semibold transition-all shadow-sm ${isDarkTheme
                 ? "border-white/30 text-white hover:bg-white/10 hover:border-white"
                 : "border-line-gray text-headline-dark hover:border-deep-graphite hover:bg-surface-white"
-            }`}
+              }`}
           >
             <PhoneCall size={16} />
             <span>+91 94143 93320</span>
           </a>
-          <Link 
-            href="#booking" 
-            className={`py-2.5 px-6 text-sm font-medium rounded-lg flex items-center gap-2 transition-colors ${
-              isDarkTheme
+          <Link
+            href="#booking"
+            className={`py-2.5 px-6 text-sm font-medium rounded-lg flex items-center gap-2 transition-colors ${isDarkTheme
                 ? "bg-white text-[#0b1b3d] hover:bg-gray-100"
                 : "bg-[#0b1b3d] hover:bg-[#132752] text-white"
-            }`}
+              }`}
           >
             Book Appointment <ArrowRight size={16} />
           </Link>
